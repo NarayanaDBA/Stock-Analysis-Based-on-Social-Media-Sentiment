@@ -7,9 +7,9 @@ import tweepy
 from textblob import TextBlob
 
 # Twitter API credentials
-consumer_key = 'uXMSy98NAEA1YiPiNBfmBjsjx'
+consumer_key = 'uXMSy98NAEA1YiPiNBfmBjsj'
 consumer_key_secret = 'orp6sZjAG1jZvwIngE4mCudl7aoHwF0X7HachWHnJ7ik1bmmW'
-access_token = '1864253945364750336-LoWRG10XhQgC5UK81M43RxLDThSWh'
+access_token = '1864253945364750336-LoWRG10XhQgC5UK81M43RxLDThSWhj'
 access_token_secret = 'kG9VvNcNXEfbc3SDz2oc3z5HuKMp98NgqPE6ZRdurcub'
 
 # Authenticate with the Twitter API
@@ -46,6 +46,20 @@ if tweets.data:
                 print("Neutral")
 else:
     print("No tweets found.")
+
+
+import time
+
+query = "stock market"
+while True:
+    try:
+        response = client.search_recent_tweets(query=query, max_results=10)
+        print(response.data)
+        break  # Exit the loop if successful
+    except tweepy.errors.TooManyRequests:
+        print("Rate limit exceeded. Waiting for 15 minutes...")
+        time.sleep(900)  # Wait for 15 minutes before retrying
+
 
 
 
