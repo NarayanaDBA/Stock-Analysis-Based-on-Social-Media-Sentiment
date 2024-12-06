@@ -1,15 +1,16 @@
 ##Stock Movement Analysis Based on Social Media Sentiment in Twitter
 
 #Python Code
+## Note: Change the consumer_key, consumer_key_secret, access_token, access_token_secret and also bearer_token as per the Your Twitter Developer account. 
 
 import tweepy
 from textblob import TextBlob
 
 # Twitter API credentials
 consumer_key = 'uXMSy98NAEA1YiPiNBfmBjsjx'
-consumer_key_secret = 'orp6sZjAG1jZvwIngE4mCudl7aoHwF0X7HachWHnJ7ik1bmmWZ'
-access_token = '1864253945364750336-LoWRG10XhQgC5UK81M43RxLDThSWhj'
-access_token_secret = 'kG9VvNcNXEfbc3SDz2oc3z5HuKMp98NgqPE6ZRdurcubB'
+consumer_key_secret = 'orp6sZjAG1jZvwIngE4mCudl7aoHwF0X7HachWHnJ7ik1bmmW'
+access_token = '1864253945364750336-LoWRG10XhQgC5UK81M43RxLDThSWh'
+access_token_secret = 'kG9VvNcNXEfbc3SDz2oc3z5HuKMp98NgqPE6ZRdurcub'
 
 # Authenticate with the Twitter API
 client = tweepy.Client(
