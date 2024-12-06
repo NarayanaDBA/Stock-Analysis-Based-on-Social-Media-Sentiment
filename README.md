@@ -14,4 +14,4 @@ This project predicts stock price movements based on social media sentiment usin
 1. Clone the repository:
    ```bash
    git clone https://github.com/NarayanaDba/Stock-Analysis-Based-on-Social-Media-Sentiment.git
-   cd Stock-Movement-Prediction
+   cd Stock-Movement-Prediction    
